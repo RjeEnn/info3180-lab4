@@ -1,0 +1,13 @@
+{% extends 'base.html' %}
+
+{% block main %}
+
+{% include 'flash_messages.html' %}
+
+<div class="display">
+    {% for i in images %}
+        <img src="{{ url_for('get_image', filename=i) }}" alt="">
+    {% endfor %}
+</div>
+
+{% endblock %}
